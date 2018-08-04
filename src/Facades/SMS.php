@@ -1,6 +1,6 @@
 <?php
 
-namespace InsenseSMS\Facades;
+namespace Insense\LaravelSMS\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace InsenseSMS\Channels;
+namespace Insense\LaravelSMS\Channels;
 
-use InsenseSMS\Channels\Contracts\SMSChannelDriver;
+use Insense\LaravelSMS\Channels\Contracts\SMSChannelDriver;
 
 class NullDriver implements SMSChannelDriver
 {

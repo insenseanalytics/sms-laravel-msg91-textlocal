@@ -1,16 +1,16 @@
 <?php
 
-namespace InsenseSMS\Channels;
+namespace Insense\LaravelSMS\Channels;
 
-use InsenseSMS\Channels\Contracts\SMSChannelDriver;
+use Insense\LaravelSMS\Channels\Contracts\SMSChannelDriver;
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Validator;
 use Exception;
-use InsenseSMS\Events\SMSSentEvent;
-use InsenseSMS\Events\SMSDeliveryEvent;
-use InsenseSMS\Events\SMSUnsubscribeEvent;
+use Insense\LaravelSMS\Events\SMSSentEvent;
+use Insense\LaravelSMS\Events\SMSDeliveryEvent;
+use Insense\LaravelSMS\Events\SMSUnsubscribeEvent;
 
 class Textlocal extends SMSChannelDriver
 {

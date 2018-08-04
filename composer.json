@@ -1,5 +1,5 @@
 {
-    "name": "insense/sms",
+    "name": "insense/laravel-sms",
     "description": "This package will provide SMS facility to SMS Channels",
     "authors": [
         {
@@ -16,20 +16,19 @@
     },
     "autoload": {
         "psr-4": {
-            "InsenseSMS\\": "src"
+            "Insense\\LaravelSMS\\": "src"
         }
     },
     "autoload-dev": {
-        "classmap": [
-        ]
+        "classmap": []
     },
     "extra": {
         "laravel": {
             "providers": [
-                "InsenseSMS\\Providers\\SMSChannelServiceProvider"
+                "Insense\\LaravelSMS\\Providers\\SMSChannelServiceProvider"
             ],
             "aliases": {
-                "Debugbar": "InsenseSMS\\Facades\\SMS"
+                "Debugbar": "Insense\\LaravelSMS\\Facades\\SMS"
             }
         }
     }

@@ -38,7 +38,7 @@ If using Laravel 5.1 to 5.4, Register the ServiceProvider and (optionally) the F
 
 'providers' => [
     ...
-    \InsenseSMS\Providers\SMSChannelServiceProvider::class,
+    \Insense\LaravelSMS\Providers\SMSChannelServiceProvider::class,
 
 ];
 
@@ -46,14 +46,14 @@ If using Laravel 5.1 to 5.4, Register the ServiceProvider and (optionally) the F
 
 'aliases' => [
 	...
-    'SMS' => \InsenseSMS\Facades\SMS::class,
+    'SMS' => \Insense\LaravelSMS\Facades\SMS::class,
 ],
 ```
 
 Next, publish the config file with the following `artisan` command.<br />
 
 ```bash
-php artisan vendor:publish --provider="InsenseSMS\Providers\SMSChannelServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Insense\LaravelSMS\Providers\SMSChannelServiceProvider" --tag="config"
 ```
 
 or if using Laravel 5.5 <br />
@@ -138,15 +138,15 @@ Add appropriete listners of SMS events in your `EventServiceProvider`
  */
 protected $listen = [
     // to listen for Delivery Report of SMS, populate `SMSReport` Model
-    'InsenseSMS\Events\SMSDeliveryEvent' => [
+    'Insense\LaravelSMS\Events\SMSDeliveryEvent' => [
         'App\Listeners\YourListener1',
     ],
     // to listen for sms sent api triggered, client can now wait for delivery report
-    'InsenseSMS\Events\SMSSentEvent' => [
+    'Insense\LaravelSMS\Events\SMSSentEvent' => [
         'App\Listeners\YourListener2',
     ],
     // to listen for unsubscribed any user(Laravel User) from Application, As his/her no is not valid
-    'InsenseSMS\Events\SMSUnsubscribeEvent' => [
+    'Insense\LaravelSMS\Events\SMSUnsubscribeEvent' => [
         'App\Listeners\YourListener3',
     ],
 ];

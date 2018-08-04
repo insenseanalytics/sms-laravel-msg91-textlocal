@@ -1,6 +1,6 @@
 <?php
 
-namespace InsenseSMS\Events;
+namespace Insense\LaravelSMS\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace InsenseSMS\Channels;
+namespace Insense\LaravelSMS\Channels;
 use ArrayAccess;
 use JsonSerializable;
 use Illuminate\Contracts\Support\Jsonable;

@@ -1,8 +1,8 @@
 <?php
 
-namespace InsenseSMS\Http\Controllers;
+namespace Insense\LaravelSMS\Http\Controllers;
 
-use InsenseSMS\Http\Controllers\Controller;
+use Insense\LaravelSMS\Http\Controllers\Controller;
 use SMS;
 use Illuminate\Http\Request;
 
@@ -13,7 +13,8 @@ class SMSController extends Controller
         SMS::driver($driver)->deliverReport($request);
     }
 
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         $defaultDriver = SMS::driver();
         $textlocalDriver = SMS::driver('textlocal');
         $isTransactional = true;
@@ -24,15 +25,15 @@ class SMSController extends Controller
         $msgTextlocal = "Promotional MSG Testing: This is testing message from textLocal";
         $msg91Tran = "Transactional MSG Testing: This is testing message from msg91";
         $msgTextlocalTran = "Transactional MSG Testing: This is testing message from textLocal";
-        if($isTransactional) {
-            $report= $defaultDriver->sendSms($to, $msg91Tran, true); 
+        if ($isTransactional) {
+            $report= $defaultDriver->sendSms($to, $msg91Tran, true);
         } else {
-           $report= $defaultDriver->sendSms($to, $msg91); 
+            $report= $defaultDriver->sendSms($to, $msg91);
+            //$report1= $textlocalDriver->sendSms($to, $msgTextlocal);
         }
         
         
         //$report1= $textlocalDriver->sendSms($to, $msgTextlocal);
         return [$report];
     }
-
 }

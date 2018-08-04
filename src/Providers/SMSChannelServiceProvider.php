@@ -1,9 +1,9 @@
 <?php
 
-namespace InsenseSMS\Providers;
+namespace Insense\LaravelSMS\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use InsenseSMS\Channels\SMSChannelManager;
+use Insense\LaravelSMS\Channels\SMSChannelManager;
 
 class SMSChannelServiceProvider extends ServiceProvider
 {

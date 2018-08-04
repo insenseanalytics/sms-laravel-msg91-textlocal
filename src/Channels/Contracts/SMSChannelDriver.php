@@ -1,8 +1,8 @@
 <?php
 
-namespace InsenseSMS\Channels\Contracts;
+namespace Insense\LaravelSMS\Channels\Contracts;
 use Carbon\Carbon;
-use InsenseSMS\Channels\SMSChannelManager;
+use Insense\LaravelSMS\Channels\SMSChannelManager;
 use Illuminate\Contracts\Container\Container;
 use Closure;
 
@@ -39,7 +39,7 @@ abstract class SMSChannelDriver {
 	 */
 	abstract public function sendSmsGroup($groupId, $message = null, $transactional = false, $unicode = false, Carbon $scheduleTime = null, array $options = []);
 	
-	abstract public function sendMessage(\InsenseSMS\Channels\SMSMessage $message);
+	abstract public function sendMessage(\Insense\LaravelSMS\Channels\SMSMessage $message);
 	
 	/**
 	 * Create a new contact group

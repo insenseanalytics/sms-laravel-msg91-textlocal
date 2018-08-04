@@ -1,14 +1,14 @@
 <?php
 
-namespace InsenseSMS\Channels;
+namespace Insense\LaravelSMS\Channels;
 
-use InsenseSMS\Channels\Contracts\SMSChannelDriver;
+use Insense\LaravelSMS\Channels\Contracts\SMSChannelDriver;
 use GuzzleHttp\Client as HttpClient;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Exception;
-use InsenseSMS\Events\SMSSentEvent;
-use InsenseSMS\Events\SMSDeliveryEvent;
+use Insense\LaravelSMS\Events\SMSSentEvent;
+use Insense\LaravelSMS\Events\SMSDeliveryEvent;
 
 class Msg91 extends SMSChannelDriver
 {

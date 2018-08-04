@@ -1,6 +1,6 @@
 <?php
 
-namespace InsenseSMS\Channels;
+namespace Insense\LaravelSMS\Channels;
 
 use Illuminate\Notifications\Notification;
 
@@ -9,7 +9,7 @@ class SMSChannel {
     /**
      * The SMS driver client instance.
      *
-     * @var \InsenseSMS\Channels\Contracts\SMSChannelDriver
+     * @var \Insense\LaravelSMS\Channels\Contracts\SMSChannelDriver
      */
     protected $driver;
 

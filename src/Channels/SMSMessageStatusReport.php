@@ -1,6 +1,6 @@
 <?php
 
-namespace InsenseSMS\Channels;
+namespace Insense\LaravelSMS\Channels;
 
 class SMSMessageStatusReport extends SMSMessage {
 	

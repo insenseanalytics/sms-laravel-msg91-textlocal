@@ -12,7 +12,7 @@
   |
  */
 
-$namespace = 'InsenseSMS\Http\Controllers';
+$namespace = 'Insense\LaravelSMS\Http\Controllers';
 
 Route::group(['prefix' => '/', 'namespace' =>  $namespace], function () {
     Route::any(
