@@ -1,4 +1,4 @@
-# Insense/SMS
+# Insense/Laravel SMS
 
 A package for the Laravel Framework for sending sms using the textloacl and Msg91 APIs.
 This package provides wrapper Fascade around the internal sms implementaiton .
@@ -28,7 +28,7 @@ This package currently supports Laravel 5.1 and up.
 Install the package via composer
 
 ```bash
-composer require insense/sms
+composer require insense/laravel-sms
 ```
 
 If using Laravel 5.1 to 5.4, Register the ServiceProvider and (optionally) the Facade
@@ -235,4 +235,4 @@ SMS::getContacts($groupId = null);
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
