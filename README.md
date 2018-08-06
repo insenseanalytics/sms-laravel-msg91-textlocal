@@ -1,22 +1,17 @@
 # Insense/Laravel SMS
 
-A package for the Laravel Framework for sending sms using the Textloacl and Msg91 APIs.
-This package provides wrapper Facade around the internal sms implementation of Different APIs.
+A package for the Laravel Framework for sending sms. This package currently supports Textlocal and MSG91 APIs but can be easily extended for others as well. We are open to PRs to extend this other services.
+
+This package provides a wrapper Facade around the internal sms implementation of the supported sms APIs.
 
 ##### Basic Example
 
 ```php
-$defaultDriver = SMS::driver();
-$isTransactionalSMS = true;
-$sender1 = "XXXXXXXXXX";
-$sender2 = "XXXXXXXXXX";
-    $toArray = [$sender1, $sender2];
-        $msgText = "Your SMS text should be typed here";
-        if($isTransactional) {
-            $report= $defaultDriver->sendSms($toArray, $msgText, true); 
-        } else {
-           $report= $defaultDriver->sendSms($toArray, $msgText); 
-        }
+$recipient1 = "XXXXXXXXXX";
+$recipient2 = "XXXXXXXXXX";
+$recipients = [$sender1, $sender2];
+$msgText = "Your SMS text should be typed here";
+SMS::driver()->sendSms($recipients, $msgText, $isTransactional);	
 ```
 
 ## Version Compatibility
@@ -56,7 +51,7 @@ Next, publish the config file with the following `artisan` command.<br />
 php artisan vendor:publish --provider="Insense\LaravelSMS\Providers\SMSChannelServiceProvider" --tag="config"
 ```
 
-or if using Laravel 5.5 <br />
+or if using Laravel 5.5+ <br />
 
 ```bash
 php artisan vendor:publish
@@ -128,7 +123,7 @@ class SMSReport extends BaseModel
     protected $table = "sms_reports";
 }
 ```
-Add appropriete listners of SMS events in your `EventServiceProvider` 
+Add appropriate listners of SMS events in your `EventServiceProvider` 
 
 ```php
 /**
@@ -145,7 +140,7 @@ protected $listen = [
     'Insense\LaravelSMS\Events\SMSSentEvent' => [
         'App\Listeners\YourListener2',
     ],
-    // to listen for unsubscribed any user(Laravel User) from Application, As his/her no is not valid
+    // to listen for unsubscribed any user(Laravel User) from application because of incorrect number
     'Insense\LaravelSMS\Events\SMSUnsubscribeEvent' => [
         'App\Listeners\YourListener3',
     ],
@@ -176,7 +171,7 @@ require 'vendor/autoload.php';
 
 ## Usage
 
-The Insense SMS package offers most of the functionality to send Group SMS, Batch SMS
+The Insense SMS package offers most of the functionality to send group SMS and batch SMS
 
 The `SMS::sendSms()` method may be used to send a sms message:
 
