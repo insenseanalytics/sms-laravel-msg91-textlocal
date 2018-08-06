@@ -9,7 +9,7 @@ This package provides a wrapper Facade around the internal sms implementation of
 ```php
 $recipient1 = "XXXXXXXXXX";
 $recipient2 = "XXXXXXXXXX";
-$recipients = [$sender1, $sender2];
+$recipients = [$recipient1, $recipient2];
 $msgText = "Your SMS text should be typed here";
 SMS::driver()->sendSms($recipients, $msgText, $isTransactional);	
 ```
