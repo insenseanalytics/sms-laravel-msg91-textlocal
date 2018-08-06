@@ -149,25 +149,8 @@ protected $listen = [
 
 
 
-### HTTP Client Dependency
-Guzzle Http client is used to send requests to API, It must be installed in application, if not installed 
-
-#### Guzzle 6 example implementation
-
-Install the dependencies:
-
-```bash
-$ composer require guzzlehttp/guzzle
-```
-
-After installing, you need to require Composer's autoloader:
-
-```php
-require 'vendor/autoload.php';
-```
----
-
-<br /><br />
+### HTTP Client Dependency : Guzzle Http
+Guzzle Http client is used to send requests to API, It must be installed in application, if not installed, it will be installed automatically.
 
 ## Usage
 

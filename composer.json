@@ -1,6 +1,7 @@
 {
     "name": "insense/laravel-sms",
     "description": "This package will provide SMS facility to SMS Channels",
+    "license": "MIT",
     "authors": [
         {
             "name": "Amit Kumar Kannaujiya",
