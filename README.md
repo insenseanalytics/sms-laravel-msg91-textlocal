@@ -7,11 +7,12 @@ This package provides a wrapper Facade around the internal sms implementation of
 ##### Basic Example
 
 ```php
+$isTransactionalMsg = false;
 $recipient1 = "XXXXXXXXXX";
 $recipient2 = "XXXXXXXXXX";
 $recipients = [$recipient1, $recipient2];
 $msgText = "Your SMS text should be typed here";
-SMS::driver()->sendSms($recipients, $msgText, $isTransactional);	
+SMS::driver()->sendSms($recipients, $msgText, $isTransactionalMsg);	
 ```
 
 ## Version Compatibility
