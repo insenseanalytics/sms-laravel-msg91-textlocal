@@ -19,7 +19,4 @@ Route::group(['prefix' => '/', 'namespace' =>  $namespace], function () {
         '/sms/report/{driver}',
      'SMSController@deliveryReceipt'
     )->name('sms.deliveryReport');
-
-    
-    Route::any('sms/test', 'SMSController@index');
 });

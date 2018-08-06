@@ -1,7 +1,7 @@
 # Insense/Laravel SMS
 
-A package for the Laravel Framework for sending sms using the textloacl and Msg91 APIs.
-This package provides wrapper Fascade around the internal sms implementaiton .
+A package for the Laravel Framework for sending sms using the Textloacl and Msg91 APIs.
+This package provides wrapper Facade around the internal sms implementation of Different APIs.
 
 ##### Basic Example
 
