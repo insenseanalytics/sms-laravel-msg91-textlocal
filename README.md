@@ -88,7 +88,7 @@ TEXTLOCAL_APIKEY=
 # TextLocal Api registration username
 TEXTLOCAL_USERNAME=
 
-# TextLocal Api Hascode 
+# TextLocal Api Hashcode 
 TEXTLOCAL_HASH=
 
 # textlocal api end point, this can be changed check same from textlocal api doc
@@ -123,7 +123,7 @@ class SMSReport extends BaseModel
     protected $table = "sms_reports";
 }
 ```
-Add appropriate listners of SMS events in your `EventServiceProvider` 
+Add appropriate listeners of SMS events in your `EventServiceProvider` 
 
 ```php
 /**
@@ -147,10 +147,8 @@ protected $listen = [
 ];
 ```
 
-
-
 ### HTTP Client Dependency : Guzzle Http
-Guzzle Http client is used to send requests to API, It must be installed in application, if not installed, it will be installed automatically.
+Guzzle Http client is used to send requests to API and is a dependency of this package.
 
 ## Usage
 
